@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/body.jpg');
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff83;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    animation: slideIn 0.3s ease-out;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    border-radius: 30px;
+}
+
+button:hover{
+    background-color: rgba(0, 255, 255, 0.411);
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        margin-right: 350px;
+        display: block;
+        order: -1;
+    }
+
+    nav {
+        display: none; /* Изначально скрываем меню на мобильных устройствах */
+        top: 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
